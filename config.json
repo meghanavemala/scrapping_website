@@ -1,0 +1,57 @@
+{
+    "scraping": {
+        "max_colleges": 50,
+        "request_delay": 1.5,
+        "timeout": 30,
+        "retry_attempts": 3,
+        "use_selenium_fallback": true,
+        "concurrent_requests": 3
+    },
+    "ai_generation": {
+        "model": "openai/gpt-3.5-turbo",
+        "max_tokens": 2500,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "rural_student_focus": true,
+        "retry_attempts": 3
+    },
+    "output": {
+        "save_formats": ["json", "excel", "summary"],
+        "output_directory": "output",
+        "include_raw_data": true,
+        "include_images": true,
+        "create_backup": false
+    },
+    "search_terms": [
+        "engineering colleges Karnataka top",
+        "medical colleges Karnataka NEET",
+        "arts colleges Karnataka humanities",
+        "science colleges Karnataka",
+        "commerce colleges Karnataka",
+        "management colleges Karnataka MBA",
+        "law colleges Karnataka",
+        "universities Karnataka",
+        "technical institutes Karnataka",
+        "professional colleges Karnataka"
+    ],
+    "target_sources": [
+        "https://kea.kar.nic.in/",
+        "https://www.careers360.com/colleges/list-of-colleges-in-karnataka",
+        "https://www.collegedunia.com/karnataka-colleges",
+        "https://www.shiksha.com/college/karnataka-colleges-ctlg"
+    ],
+    "filters": {
+        "min_data_completeness": 0.3,
+        "exclude_keywords": ["coaching", "tuition", "training center"],
+        "include_only_karnataka": true,
+        "max_establishment_year": 2025,
+        "min_establishment_year": 1800
+    },
+    "data_quality": {
+        "validate_phone_numbers": true,
+        "validate_email_addresses": true,
+        "validate_urls": true,
+        "clean_html": true,
+        "normalize_text": true
+    }
+}
